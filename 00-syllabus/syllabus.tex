@@ -1,0 +1,319 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[inner=1in,outer=1in,top=1in,bottom=1in]{geometry}
+\pagestyle{empty}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage{amsmath, amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\CourseTitle} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\CourseSemester \CourseYear} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+\usepackage{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xspace}
+
+\newcommand{\CourseNumber}{NSE 457/557}
+\newcommand{\CourseTitle}{Nuclear Reactor Laboratory\xspace}%
+\newcommand{\CourseInstructor}{Dr. Madicken Munk\xspace}%
+\newcommand{\CourseSemester}{Spring\xspace}%
+\newcommand{\CourseYear}{2025\xspace}%
+\newcommand{\CourseDays}{M\xspace}%
+\newcommand{\CourseStart}{8:00\xspace}%
+\newcommand{\CourseEnd}{8:50\xspace}%
+\newcommand{\CourseInstructorEmail}{madicken.munk@oregonstate.edu}
+\newcommand{\CourseRoom}{104C\xspace}%
+\newcommand{\CourseBuilding}{Radiation Center\xspace}%
+\newcommand{\CourseZoom}{}%
+\newcommand{\CourseUniversity}{Oregon State University\xspace}%
+\newcommand{\TeachingAssistant}{Grant Hendrickson \xspace}%
+\newcommand{\TAOfficeHourDays}{Date Unknown \xspace}%
+\newcommand{\TAOfficeHourStart}{TBA\xspace}%
+\newcommand{\TAOfficeHourEnd}{TBA\xspace}%
+\newcommand{\TAOfficeHourPlace}{220 Merryfield Hall\xspace}
+\newcommand{\MunkOfficeHourDays}{Mondays\xspace}%
+\newcommand{\MunkOfficeHourStart}{9:00 a.m.\xspace}%
+\newcommand{\MunkOfficeHourEnd}{9:50 a.m.\xspace}%
+\newcommand{\MunkOfficeHourPlace}{OSU Radiation Center Library\xspace}
+%\newcommand{\Course<++>}{<++>}
+%\newcommand{\Course<++>}{<++>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\CourseNumber: \CourseTitle\\}
+\author{\CourseUniversity}
+\date{\CourseSemester \CourseYear}
+\begin{document}
+\maketitle
+%\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{rXrX}
+\hline
+\textbf{Instructor:} & \CourseInstructor & \textbf{Email:} & \href{mailto:\CourseInstructorEmail}{\CourseInstructorEmail} \\
+\textbf{Time:} & \CourseDays \CourseStart -- \CourseEnd & \textbf{Place:} & \CourseRoom \CourseBuilding \\
+\textbf{TA:} & \TeachingAssistant & & \\
+\hline
+\end{tabularx}
+\end{table}
+\end{center}
+
+\paragraph{Course Pages:}
+\begin{enumerate}
+        \item \url{https://canvas.oregonstate.edu/courses/}
+        \item \url{https://www.gradescope.com/courses/}
+        \item \url{https://github.com/munkm/nseX57}
+\end{enumerate}
+
+\paragraph{TA Office Hours:} \TeachingAssistant is the TA for the course and will hold
+office hours in \TAOfficeHourPlace.
+They will hold office hours \TAOfficeHourDays from
+\TAOfficeHourStart to \TAOfficeHourEnd.
+Grade disputes will not be addressed in TA office hours.
+
+\paragraph{Office Hours:} Dr. Munk  will hold office hours on
+\MunkOfficeHourDays from \MunkOfficeHourStart to \MunkOfficeHourEnd in
+\MunkOfficeHourPlace. Supplemental office hours are by appointment only
+and should be requested with at least 24 hours notice.
+Before making an appointment, please try the following options:
+\begin{itemize}
+\item If your colleagues might be helpful, please post your questions in the
+        canvas discussion forum provided for this purpose.
+\item If the TAs might be helpful, please attend their office hours.
+\item Email Dr. Munk. If possible, please phrase your question such that it
+        can be answered `Yes' or `No'.  Questions which require substantial
+        response should be asked during the lecture or office hours.
+\end{itemize}
+
+If none of the above are successful or appropriate, you may email me with a
+selection of times of your availability and we can find a time that is mutually
+agreeable.
+
+\paragraph{Main References:}
+There are no required texts for this course. However, Dr. Munk does reccommend the following texts as supplementary knowledge for the course:
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+For assistance in computational aspects of the labs, \cite{scopatz_effective_2015} is available online and in the library as an ebook.
+
+
+\bibliographystyle{unsrt}
+\renewcommand{\refname}{\normalfont\selectfont\normalsize}\vspace{-1cm}
+\bibliography{bibliography}
+
+\paragraph{Course Learning Outcomes:}
+
+This course will equip students to:
+\begin{itemize}
+\item Process data taken in the laboratory
+\item Apply nuclear reactor theories to predict and explain the behavior of the OSU TRIGA reactor. 
+\item Write professional laboratory reports. 
+\end{itemize}
+
+In addition, students enrolled in this course will demonstrate the ability to:
+
+\begin{itemize}
+\item Develop a procedure for a laboratory execrise using the Oregon Sttate Triga Reactor (OSTR) to investigate a phenomenon of hteir choice.
+\item Use simulation tools, such as OpenMC, to compare predicted reactor behavior with measured data. 
+\end{itemize}
+
+\paragraph{Prerequisites:}
+\begin{itemize}
+\item NSE 451
+\item NSE 452
+\end{itemize}
+
+\paragraph{Grading Policy:} Grades will be assigned as a weighted sum of the following work:
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{Xr}
+\textbf{Work} & \textbf{Weight}\\
+\hline
+\textbf{Lab Participation} & (10\%) \\
+\textbf{Lab Report 1: Modeling the Subcritical Pile} & (15\%) \\
+\textbf{Lab Report 2: Subcritical Pile} & (20\%) \\
+\textbf{Lab Report 3: Control Rod Calibration} & (20\%) \\
+\textbf{Lab Report 4: Pulse} & (20\%) \\
+\textbf{Lab Report 5: Neutron Radiography} & (15\%) \\
+\hline
+\textbf{Total} & (100\%) \\
+\end{tabularx}
+\end{table}
+
+\paragraph{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+\begin{flushleft}
+Lab 1 Deadline      \dotfill Monday, April 14, 11:59pm  \\
+Lab 2 Deadline      \dotfill Monday, April 28, 11:59pm  \\
+Lab 3 deadline      \dotfill Monday, May 19, 11:59pm  \\
+Lab 4 deadline      \dotfill Monday, June 02 11:59pm  \\
+Lab 5 deadline      \dotfill Monday, June 09, 11:59pm  \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\paragraph{Lab Sesssions:}
+
+This course will have multiple laboratory sessions that will be held
+around OSU's radiation center. \textbf{Only attend lab sessions to which you are registered.} We are limited in capacity for how many people can be in the control room at a single time and the reactor has been staffed to accomodate the sizes of our labs on each day. 
+
+We will meet for the lab sessions in the lobby of the Radiation Center at 14:00 and depart for the reactor bay at 14:05. Your belongings will be securely stored by Ms. Aguilera in the RC entry office. Be on time for the lab; if you are late you may miss the escort to the reactor bay and lose points for the lab session attendance that week. 
+
+We will be performing labs in a licensed facility. To attend lab sessions in the reactor bay, radiation center staff have communicated the following requirements for this class:
+
+\begin{itemize}
+\item All participants must show government-issued photo ID upon check-in. No copies or pictures of IDs are accepted -- please bring the actual card or passport. 
+\item Cell phones, cameras, bags, and backpacks must be left in the front office prior to the tour. 
+\item \textbf{No weapons} of any kind are permitted in the reactor building. 
+\item Wear laboratory appropriate attire. This includes clothing that covers your feet, legs, and torso (long pants, closed shoes, and a full length shirt). 
+\end{itemize} 
+
+
+\paragraph{Class Policies:}
+
+\begin{itemize}
+\item[] \textbf{Integrity:} This is an institution of higher
+learning. You are expected to uphold the principles of academic 
+integrity at our institution and to be honest and ethical with your academic work. 
+Academic dishonesty such as plagiarism, cheating, assisting, tampering, and falsification will not be 
+tolerated. 
+For reference, please note the \href{https://studentlife.oregonstate.edu/studentconduct/academic-misconduct-students}{Student Guide for Academic Misconduct} 
+on OSU's Dean of Students page. 
+
+\item[] \textbf{Attendance:} Regular attendance is expected. Your attendance and participation in laboratory sessions is mandatory and will contribute to your grade in this course. Request approval for absence for extenuating circumstances prior to absence.
+
+\item[] \textbf{Electronics:} Active participation is essential and expected.
+        Accordingly, students must turn off all electronic devices (laptop,
+        tablets, cellphones, etc.) during class. Exceptions may be granted for
+        laptops and tablets if engaging in computational exercises or taking notes. In lab sessions, your backpack, phone, and laptops must be left in the front entry with Ms. Aguilera and 
+will not be permitted in the reactor bay or control room. 
+\item[] \textbf{Collaboration:} Collaboratively reviewing course materials and
+  working fellow students can be enriching.  This is
+  recommended.  However, unless otherwise instructed, lab written assignments are
+  to be completed independently and materials submitted as technical reports should be
+  the result of one's own independent work. Dr. Munk recommends working through
+  the labs exercises independently and then checking work with peers. Explaining your
+  process is a good exercise to retain course material.
+\item[] \textbf{Late Work:} Late lab assignments will not be accepted. Please plan accordingly. 
+
+\item[] \textbf{Make-up Work:} There will be no negotiation about late work
+        except in the case of absence documented by an 
+\href{https://studentlife.oregonstate.edu/emergency-notifications}{emergency notification} from the Dean of Students.
+        Dean of Students. Please note that such a letter is appropriate for many
+        types of conflicts. 
+
+\item[] \textbf{Grade Disputes:} It is important that you understand and agree
+        with the grade you receive on your reports. If you would like
+        to dispute your score, you must send an explanation by email to Dr.
+        Munk within one week of recieving the grade.
+        \textbf{Do not expect us to regrade anything while in conversation with
+        you} as that would not be fair to the other students in the class, whose
+        homeworks were graded without them present.  If you request a regrade,
+        be aware that the it is possible that your score will go down.
+        Regrade requests should be based on an error on our part (e.g., adding
+        up the points incorrectly) or what you suspect is a misunderstanding of
+        your work (e.g., arriving at the correct answer using an unexpected
+        technique). Regrade requests that argue with the rubric (e.g., ``this is
+        wrong, but you took too many points off'') will be returned without
+        consideration.
+        \textbf{Your work should stand alone.} If an assignment is disorganized or
+        ambiguous, and requires an extensive explanation to the grader, you
+        will likely still lose points. The labs not only evaluate your
+        understanding of the material - they also evaluate your ability to
+        communicate that understanding clearly.
+\end{itemize}
+
+\paragraph{Accessibility:} I hope that this course will be inclusive and
+accommodating for all learners. 
+With regard to accommodating all learners, please note that many
+resources are provided through
+\href{http://ds.oregonstate.edu}{Disability Access Services} through the Office of the Dean of Students. 
+If you, as a student, believe you are eligible for accommodations but have not obtained approval please contact DAS immediately at 541-737-4098, or at the link above. 
+To request
+particular accommodations, please contact me as soon as possible so that we can
+work out any necessary arrangements.
+
+\paragraph{Safety:}
+Emergencies can happen anywhere and at any time, so it’s important that we take
+a minute to prepare for a situation in which our safety could depend on our
+ability to react quickly. Take a moment to learn the different ways to leave
+this building. If there's ever a fire alarm or something like that, you’ll know
+how to get out and you'll be able to help others get out. Next, figure out the
+best place to go in case of severe weather - we'll need to go to a low-level in
+the middle of the building, away from windows. And finally, if there's ever
+someone trying to hurt us, our best option is to run out of the building. If we
+cannot do that safely, we'll want to hide somewhere we can't be seen, and we'll
+have to lock or barricade the door if possible and be as quiet as we can. 
+If we can't run or hide, we'll fight back with whatever we can
+get our hands on. 
+Remember you can sign up for
+emergency text messages at \url{https://emergency.oregonstate.edu/emergency-management/osu-alerts}. This
+\href{https://emergency.oregonstate.edu/emergency-preparedness/emergency-procedures/run-hide-fight-info}{Run Hide Fight Info page}
+discusses the OSU's Run-Hide-Fight strategy.
+
+
+\paragraph{Other Resources:}
+University students typically experience a wide range of stressors during their
+time on campus. Accordingly, campus resources exist to help students manage
+stress levels, mental health, physical health, and emergencies while navigating
+this environment. I hope you will take advantage of these campus resources.
+
+\begin{itemize}
+\item \href{https://recsports.oregonstate.edu/}{Campus Recreational Sports}
+\item \href{https://counseling.oregonstate.edu/}{Counselling and Psychological Services}
+\item \href{https://studenthealth.oregonstate.edu/}{Student Health Services}
+\item \href{https://studentlife.oregonstate.edu/bnc}{The Basic Needs Center}
+\end{itemize}
+
+\pagebreak
+\FloatBarrier
+\renewcommand{\arraystretch}{1}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{lllcccccc}
+\multicolumn{8}{c}{\textbf{Course Schedule:}\textit{ Note that this schedule is
+subject to change.}}\\
+&&&&&&&&\\
+\textbf{Date} & \textbf{Week} & \textbf{Day} & \textbf{Unit} & \textbf{Lab} & \textbf{Lab}& \textbf{Lab} \\
+              &  &  &  & (M/T/W)  & \textbf{Given} & \textbf{Due}\\ \hline
+\hline
+3/31 & 1 & M & Intro/Syllabus  & OSTR Tour & 1  &   \\
+4/7 & 2 & M & reactor design methodology\/ & -- &  &  \\
+ & & & modeling the subcritical pile & & & \\
+4/14 & 3 & M & subcritical pile physics,& subcritical pile & 2 & 1\\
+ & & & model validation & & & \\
+4/21 & 4 & M & model biases and    & -- &  &  \\
+ & & & control rod calibrations & & & \\
+4/28 & 5 & M & No Class                & -- &  & 2 \\
+5/5 & 6 & M & OSTR physics, burnup        & CR calibration & 3  &  \\
+ & & & in research reactors & & & \\
+5/12 & 7 & M & flux mapping, power calibration & -- &  &  \\
+5/19 & 8 & M & pulsing operations and        & pulse & 4  & 3 \\
+ & & & reactor kinetics & & & \\
+5/26 & 9 & M & Holiday                    & NRF lab & 5 &  \\
+6/2 & 10 & M & neutron radiography        & NRF lab &  & 4\\
+6/9 & 11 & M & Finals Week                & --  &  & 5  \\
+\end{tabular}
+\end{center}
+\end{table}
+\FloatBarrier
+
+
+
+%%%%%% THE END
+\end{document}
